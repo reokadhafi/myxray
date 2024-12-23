@@ -97,4 +97,13 @@ cat >/usr/local/etc/xray/config.json <<EOF
 }
 EOF
 ```
+- Edit file .bashrc atau .bash_profile:
+```
+sudo nano ~/.bashrc
+```
+- Tambahkan /root ke dalam PATH:
+```
+export PATH=$PATH:/root
+```
+
 
