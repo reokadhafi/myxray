@@ -12,6 +12,7 @@ systemctl restart xray
 systemctl enable xray
 ```
 sudo apt install certbot
+```
 sudo certbot certonly --standalone -d subdomain.reonolimits.my.id
 ```
 cat >/root/domain <<EOF
