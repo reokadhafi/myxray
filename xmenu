@@ -45,10 +45,10 @@ echo "╚═══════════════════════�
 read -p "╰┈➤Select From Options [1-69 or x] :  " xmenu
 case $xmenu in 
 1)
-add-akun
+add_akun
 ;;
 2)
-delete-akun
+delete_akun
 ;;
 3)
 cat /etc/xray/domain
@@ -81,7 +81,7 @@ cat /root/log-install.txt
 auto-pointing
 ;;
 13)
-cek-port
+cek_port
 ;;
 0)
 exit
