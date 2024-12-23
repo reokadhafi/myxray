@@ -48,7 +48,7 @@ clear
 			echo ""
 			echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 			read -n 1 -s -r -p "Press any key to back on menu"
-			./xmenu
+			xmenu
 		fi
 	done
 #
@@ -371,14 +371,14 @@ echo -e "*Note OPOK: opok only supports coremeta"
 echo -e "*Note SHADOWSOCKS: gunakan custom config atau plugin xray"
 echo -e "──────────✦✦─────────" | tee -a /etc/log-create-user.log
 echo -e "" | tee -a /etc/log-create-user.log
-echo -e "────✦Path Trojan✦────" | tee -a /etc/log-create-user.log
-echo -e "=>WS TLS: /xraytrojanws" | tee -a /etc/log-create-user.log
-echo -e "=>GRPC  : trojan-grpc" | tee -a /etc/log-create-user.log
-echo -e "=>OPOK  : ws://bugcom/xraytrojanws" | tee -a /etc/log-create-user.log
-echo -e "──────────✦✦─────────" | tee -a /etc/log-create-user.log
-echo -e "🔹Config-Trojan-WS-TLS🔹" | tee -a /etc/log-create-user.log
-echo -e "$trojanlinkws" | tee -a /etc/log-create-user.log
-echo -e "" | tee -a /etc/log-create-user.log
+#echo -e "────✦Path Trojan✦────" | tee -a /etc/log-create-user.log
+#echo -e "=>WS TLS: /xraytrojanws" | tee -a /etc/log-create-user.log
+#echo -e "=>GRPC  : trojan-grpc" | tee -a /etc/log-create-user.log
+#echo -e "=>OPOK  : ws://bugcom/xraytrojanws" | tee -a /etc/log-create-user.log
+#echo -e "──────────✦✦─────────" | tee -a /etc/log-create-user.log
+#echo -e "🔹Config-Trojan-WS-TLS🔹" | tee -a /etc/log-create-user.log
+#echo -e "$trojanlinkws" | tee -a /etc/log-create-user.log
+#echo -e "" | tee -a /etc/log-create-user.log
 echo -e "🔹Config-Trojan-WS-GRPC🔹" | tee -a /etc/log-create-user.log
 echo -e "$trojanlinkgrpc" | tee -a /etc/log-create-user.log
 echo -e "" | tee -a /etc/log-create-user.log
@@ -412,16 +412,16 @@ echo -e "" | tee -a /etc/log-create-user.log
 # echo -e "=============================" | tee -a /etc/log-create-user.log
 # echo -e "" | tee -a /etc/log-create-user.log
 echo -e "" | tee -a /etc/log-create-user.log
-echo -e "─────✦Path Vmess✦────" | tee -a /etc/log-create-user.log
-echo -e "=> WS TLS : /xrayvws" | tee -a /etc/log-create-user.log
-echo -e "=> GRPC   : vmess-grpc" | tee -a /etc/log-create-user.log
-echo -e "=> OPOK   : ws://bugcom/xrayvws" | tee -a /etc/log-create-user.log
+#echo -e "─────✦Path Vmess✦────" | tee -a /etc/log-create-user.log
+#echo -e "=> WS TLS : /xrayvws" | tee -a /etc/log-create-user.log
+#echo -e "=> GRPC   : vmess-grpc" | tee -a /etc/log-create-user.log
+#echo -e "=> OPOK   : ws://bugcom/xrayvws" | tee -a /etc/log-create-user.log
 echo -e "─────────✦✦──────────" | tee -a /etc/log-create-user.log
 echo -e "🔹Config-Vmess-WS-NTLS🔹" | tee -a /etc/log-create-user.log
 echo -e "vmess://$VMESSWS_B64" | tee -a /etc/log-create-user.log
 echo -e "" | tee -a /etc/log-create-user.log
-echo -e "🔹Config-Vmess-WS-GRPC🔹" | tee -a /etc/log-create-user.log
-echo -e "vmess://$VMESSGRPC_B64" | tee -a /etc/log-create-user.log
+#echo -e "🔹Config-Vmess-WS-GRPC🔹" | tee -a /etc/log-create-user.log
+#echo -e "vmess://$VMESSGRPC_B64" | tee -a /etc/log-create-user.log
 
-echo "" | tee -a /etc/log-create-user.log
+#echo "" | tee -a /etc/log-create-user.log
 cd
