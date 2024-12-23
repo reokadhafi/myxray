@@ -31,6 +31,9 @@ subdomain.reonolimits.my.id
 EOF
 ```
 ```
+sudo apt install jq -y
+```
+```
 cat >/usr/local/etc/xray/config.json <<EOF
 {
   "inbounds": [
