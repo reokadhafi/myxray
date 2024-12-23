@@ -35,15 +35,15 @@ echo "║5 ║ Update Script                                    ║"
 echo "║6 ║ Restart Service XRAY                             ║"
 echo "║7 ║ Speedtest Server                                 ║"
 echo "║8 ║ Reboot VPS                                       ║"
-echo "║0 ║ Exit Menu              ║"
+echo "║0 ║ Exit Menu                                        ║"
 echo "╚════════════════════════════════════════════════════╝" 
 read -p "╰┈➤Select From Options [1-69 or x] :  " xmenu
 case $xmenu in 
 1)
-add_akun
+./add_akun
 ;;
 2)
-delete_akun
+./delete_akun
 ;;
 3)
 cat /etc/xray/domain
@@ -52,10 +52,10 @@ cat /etc/xray/domain
 curl -s ipinfo.io/ip
 ;;
 5)
-updatedll
+./updatedll
 ;;
 6)
-restart_xray
+./restart_xray
 ;;
 7)
 speedtest
