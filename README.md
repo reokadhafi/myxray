@@ -8,8 +8,9 @@ sudo apt install -y curl wget vim
 bash <(curl -L https://raw.githubusercontent.com/XTLS/Xray-install/main/install-release.sh)
 ```
 ```
-systemctl restart xray
-systemctl enable xray
+sudo systemctl daemon-reload
+sudo systemctl restart xray
+sudo systemctl enable xray
 ```
 ```
 sudo apt install certbot
