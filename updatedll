@@ -4,7 +4,7 @@ cd
 rm -rf updatedll
 
 # Download skrip
-cd /usr/bin
+#cd /usr/bin
 wget -O xmenu "https://raw.githubusercontent.com/reokadhafi/myxray/main/xmenu.sh"
 wget -O add-akun "https://raw.githubusercontent.com/reokadhafi/myxray/main/add_akun"
 wget -O updatedll "https://raw.githubusercontent.com/reokadhafi/myxray/main/updatedll"
@@ -17,6 +17,8 @@ wget -O auto_delete_expired "https://raw.githubusercontent.com/reokadhafi/myxray
 # chmod +x /usr/bin/certv2ray
 
 # Berikan izin eksekusi
-chmod +x /usr/bin/updatedll /usr/bin/xmenu /usr/bin/add-akun /usr/bin/delete-akun /usr/bin/restart-xray /usr/bin/auto-pointing /usr/bin/cek-port /usr/bin/auto-delete-expired
-
+#ubuntu
+#chmod +x /usr/bin/updatedll /usr/bin/xmenu /usr/bin/add-akun /usr/bin/delete-akun /usr/bin/restart-xray /usr/bin/auto-pointing /usr/bin/cek-port /usr/bin/auto-delete-expired
+#debian
+chmod +x updatedll xmenu add-akun delete_akun restart_xray cek_port auto_delete_expired
 cd
