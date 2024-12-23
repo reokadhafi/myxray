@@ -20,5 +20,5 @@ wget -O auto_delete_expired "https://raw.githubusercontent.com/reokadhafi/myxray
 #ubuntu
 #chmod +x /usr/bin/updatedll /usr/bin/xmenu /usr/bin/add-akun /usr/bin/delete-akun /usr/bin/restart-xray /usr/bin/auto-pointing /usr/bin/cek-port /usr/bin/auto-delete-expired
 #debian
-chmod +x updatedll xmenu add-akun delete_akun restart_xray cek_port auto_delete_expired
+chmod +x updatedll xmenu add_akun delete_akun restart_xray cek_port auto_delete_expired
 cd
