@@ -112,5 +112,16 @@ source ~/.bashrc
 ```
 wget -O updatedll "https://raw.githubusercontent.com/reokadhafi/myxray/main/updatedll"
 ```
+- Ganti zona waktu
+```
+sudo timedatectl set-timezone Asia/Jakarta
+```
+- Menambah auto reboot vps (jam 7 pagi WIB)
+```
+sudo crontab -e
+```
+```
+0 7 * * * /sbin/reboot
+```
 
 
