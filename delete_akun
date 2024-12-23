@@ -14,7 +14,7 @@ if [[ ${NUMBER_OF_CLIENTS} == '0' ]]; then
     echo ""
     echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
     read -n 1 -s -r -p "Press any key to back on menu"
-    ./xmenu
+    xmenu
 fi
 
 clear
@@ -29,7 +29,7 @@ echo -e "\033[0;31mTap enter to go back\033[0m"
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 read -rp "Input Username : " user
 if [ -z "$user" ]; then
-    ./xmenu
+    xmenu
 else
     exp=$(grep -wE "^### $user" "/usr/local/etc/xray/config.json" | cut -d ' ' -f 3 | head -n 1)
     sed -i "/^### $user $exp/,/^},{/d" /usr/local/etc/xray/config.json
@@ -43,5 +43,5 @@ else
     echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
     echo ""
     read -n 1 -s -r -p "Press any key to back on menu"
-    ./xmenu
+    xmenu
 fi
