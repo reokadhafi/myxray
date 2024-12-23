@@ -15,10 +15,10 @@ sudo systemctl enable xray
 ```
 sudo apt install certbot
 ```
+- ganti subdomain.reonolimits.my.id menjadi nama domain punya kamu
 ```
 sudo certbot certonly --standalone -d subdomain.reonolimits.my.id
 ```
-- ganti subdomain.reonolimits.my.id menjadi nama domain punya kamu
 ```
 cat >/root/domain <<EOF
 subdomain.reonolimits.my.id
