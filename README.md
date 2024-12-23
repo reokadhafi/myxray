@@ -23,6 +23,7 @@ subdomain.reonolimits.my.id
 EOF
 ```
 - ganti subdomain.reonolimits.my.id menjadi nama domain punya kamu
+```
 mkdir -p /etc/xray
 cat >/etc/xray/domain <<EOF
 subdomain.reonolimits.my.id
