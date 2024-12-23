@@ -7,9 +7,9 @@ sudo apt install -y curl wget vim
 ```
 bash <(curl -L https://raw.githubusercontent.com/XTLS/Xray-install/main/install-release.sh)
 ```
+```
 systemctl restart xray
 systemctl enable xray
-```
 ```
 sudo apt install certbot
 sudo certbot certonly --standalone -d subdomain.reonolimits.my.id
