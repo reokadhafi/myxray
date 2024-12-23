@@ -3,5 +3,3 @@
 systemctl daemon-reload
 systemctl enable xray
 systemctl restart xray
-systemctl enable runn
-systemctl restart runn
