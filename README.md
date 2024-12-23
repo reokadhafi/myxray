@@ -11,6 +11,7 @@ bash <(curl -L https://raw.githubusercontent.com/XTLS/Xray-install/main/install-
 systemctl restart xray
 systemctl enable xray
 ```
+```
 sudo apt install certbot
 ```
 sudo certbot certonly --standalone -d subdomain.reonolimits.my.id
@@ -20,6 +21,7 @@ subdomain.reonolimits.my.id
 EOF
 ```
 - ganti subdomain.reonolimits.my.id menjadi nama domain punya kamu
+```
 ```
 mkdir -p /etc/xray
 cat >/etc/xray/domain <<EOF
