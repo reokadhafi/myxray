@@ -5,7 +5,7 @@ rm -rf updatedll
 
 # Download skrip
 #cd /usr/bin
-wget -O xmenu "https://raw.githubusercontent.com/reokadhafi/myxray/main/xmenu.sh"
+wget -O xmenu "https://raw.githubusercontent.com/reokadhafi/myxray/main/xmenu"
 wget -O add-akun "https://raw.githubusercontent.com/reokadhafi/myxray/main/add_akun"
 wget -O updatedll "https://raw.githubusercontent.com/reokadhafi/myxray/main/updatedll"
 wget -O delete_akun "https://raw.githubusercontent.com/reokadhafi/myxray/main/delete_akun"
