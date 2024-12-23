@@ -364,13 +364,13 @@ echo -e "IP         : $MYIP" | tee -a /etc/log-create-user.log
 echo -e "Host/Domain: $domain" | tee -a /etc/log-create-user.log
 echo -e "Password/ID: $uuid" | tee -a /etc/log-create-user.log
 echo -e "────────✦Port✦───────" | tee -a /etc/log-create-user.log
-echo -e "Ws TLS : 443" | tee -a /etc/log-create-user.log
+#echo -e "Ws TLS : 443" | tee -a /etc/log-create-user.log
 echo -e "Ws NTLS: 80" | tee -a /etc/log-create-user.log
 echo -e "GRPC   : 443" | tee -a /etc/log-create-user.log
-echo -e "*Note OPOK: opok only supports coremeta"
-echo -e "*Note SHADOWSOCKS: gunakan custom config atau plugin xray"
-echo -e "──────────✦✦─────────" | tee -a /etc/log-create-user.log
-echo -e "" | tee -a /etc/log-create-user.log
+#echo -e "*Note OPOK: opok only supports coremeta"
+#echo -e "*Note SHADOWSOCKS: gunakan custom config atau plugin xray"
+#echo -e "──────────✦✦─────────" | tee -a /etc/log-create-user.log
+#echo -e "" | tee -a /etc/log-create-user.log
 #echo -e "────✦Path Trojan✦────" | tee -a /etc/log-create-user.log
 #echo -e "=>WS TLS: /xraytrojanws" | tee -a /etc/log-create-user.log
 #echo -e "=>GRPC  : trojan-grpc" | tee -a /etc/log-create-user.log
