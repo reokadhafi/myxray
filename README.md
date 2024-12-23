@@ -1,0 +1,73 @@
+sudo apt update && sudo apt upgrade -y
+sudo apt install -y curl wget vim
+bash <(curl -L https://raw.githubusercontent.com/XTLS/Xray-install/main/install-release.sh)
+
+systemctl restart xray
+systemctl enable xray
+
+sudo apt install certbot
+sudo certbot certonly --standalone -d subdomain.reonolimits.my.id
+
+
+cat >/usr/local/etc/xray/config.json <<EOF
+{
+  "inbounds": [
+    {
+      "port": 80,  // Port untuk VMess WebSocket tanpa TLS
+      "protocol": "vmess",
+      "settings": {
+        "clients": [
+          {
+            "id": "14a995ab-1098-4d94-9984-334744714882",  // UUID untuk VMess
+            "alterId": 0
+#vmess
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",  // Menggunakan WebSocket
+        "wsSettings": {
+          "path": "/vmessws",  // Path untuk VMess WS
+          "headers": {
+            "Host": "ovh.reonolimits.my.id"  // Host
+          }
+        }
+      }
+    },
+    {
+      "port": 443,  // Port untuk Trojan gRPC dengan TLS
+      "protocol": "trojan",
+      "settings": {
+        "clients": [
+          {
+            "password": "14a995ab-1098-4d94-9984-334744714882",  // Password untuk Trojan
+            "email": "reo1"
+#trojangrpc
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "grpc",  // Menggunakan gRPC
+        "security": "tls",  // Mengaktifkan TLS
+        "tlsSettings": {
+          "certificates": [
+            {
+              "certificateFile": "/etc/letsencrypt/live/ovh.reonolimits.my.id/fullchain.pem",  // Sertifikat TLS dari Certbot
+              "keyFile": "/etc/letsencrypt/live/ovh.reonolimits.my.id/privkey.pem"  // Private key dari Certbot
+            }
+          ]
+        },
+        "grpcSettings": {
+          "serviceName": "trojangrpc"  // Nama service gRPC
+        }
+      }
+    }
+  ],
+  "outbounds": [
+    {
+      "protocol": "freedom",
+      "settings": {}
+    }
+  ]
+}
+EOF
