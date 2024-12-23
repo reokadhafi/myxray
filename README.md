@@ -105,6 +105,9 @@ sudo nano ~/.bashrc
 ```
 export PATH=$PATH:/root
 ```
+```
+source ~/.bashrc
+```
 - Pasang Xmenu
 ```
 wget -O updatedll "https://raw.githubusercontent.com/reokadhafi/myxray/main/updatedll"
