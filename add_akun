@@ -87,7 +87,7 @@ VMESSWS_JSON=$(jq -n \
       "net": "ws",
       "type": "none",
       "host": $server,
-      "path": "/xrayvws",
+      "path": "/vmessws",
       "tls": "false",
       "expiry": $expiry
     }')
@@ -107,7 +107,7 @@ VMESSGRPC_JSON=$(jq -n \
       "net": "grpc",
       "type": "none",
       "host": "",
-      "path": "vmess-grpc", # Ganti dengan nama service gRPC Anda
+      "path": "vmessgrpc", # Ganti dengan nama service gRPC Anda
       "tls": "tls",
       "expiry": $expiry
     }')
@@ -124,7 +124,7 @@ vlesslinknon="vless://${uuid}@${domain}:80?path=/xrayws&encryption=none&type=ws#
 # vlesslinkgrpc="vless://${uuid}@${domain}:443?mode=gun&security=tls&encryption=none&type=grpc&serviceName=vless-grpc&sni=bug.com#${user}"
 
 #buattrojan
-trojanlinkgrpc="trojan://${uuid}@${domain}:443?mode=gun&security=tls&type=grpc&serviceName=trojan-grpc&sni=bug.com#${user}"
+trojanlinkgrpc="trojan://${uuid}@${domain}:443?mode=gun&security=tls&type=grpc&serviceName=trojangrpc&sni=bug.com#${user}"
 trojanlinkws="trojan://${uuid}@${domain}:443?path=/xraytrojanws&security=tls&host=bug.com&type=ws&sni=bug.com#${user}"
 
 #buatshadowsocks
@@ -396,16 +396,16 @@ echo -e "" | tee -a /etc/log-create-user.log
 # echo -e "URL Custom Config GRPC TLS : http://${domain}:89/ss-grpc-$user.txt" | tee -a /etc/log-create-user.log
 # echo -e "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━" | tee -a /etc/log-create-user.log
 # echo -e "" | tee -a /etc/log-create-user.log
-echo -e "─────✦Path Vless✦────" | tee -a /etc/log-create-user.log
-echo -e "=>WS TLS: /xrayws" | tee -a /etc/log-create-user.log
-echo -e "=>GRPC  : vless-grpc" | tee -a /etc/log-create-user.log
-echo -e "=>OPOK  : ws://bugcom/xrayws" | tee -a /etc/log-create-user.log
-echo -e "──────────✦✦─────────" | tee -a /etc/log-create-user.log
-echo -e "🔹Config-Vless-WS-NTLS🔹" | tee -a /etc/log-create-user.log
-echo -e "$vlesslinknon" | tee -a /etc/log-create-user.log
-echo -e "" | tee -a /etc/log-create-user.log
-echo -e "🔹Config-Vless-WS-TLS🔹" | tee -a /etc/log-create-user.log
-echo -e "$vlesslinkws" | tee -a /etc/log-create-user.log
+# echo -e "─────✦Path Vless✦────" | tee -a /etc/log-create-user.log
+# echo -e "=>WS TLS: /xrayws" | tee -a /etc/log-create-user.log
+# echo -e "=>GRPC  : vless-grpc" | tee -a /etc/log-create-user.log
+# echo -e "=>OPOK  : ws://bugcom/xrayws" | tee -a /etc/log-create-user.log
+# echo -e "──────────✦✦─────────" | tee -a /etc/log-create-user.log
+# echo -e "🔹Config-Vless-WS-NTLS🔹" | tee -a /etc/log-create-user.log
+# echo -e "$vlesslinknon" | tee -a /etc/log-create-user.log
+# echo -e "" | tee -a /etc/log-create-user.log
+# echo -e "🔹Config-Vless-WS-TLS🔹" | tee -a /etc/log-create-user.log
+# echo -e "$vlesslinkws" | tee -a /etc/log-create-user.log
 # echo -e "=============================" | tee -a /etc/log-create-user.log
 # echo -e "====== Vless GRPC TLS =======" | tee -a /etc/log-create-user.log
 # echo -e "$vlesslinkgrpc" | tee -a /etc/log-create-user.log
