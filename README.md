@@ -12,7 +12,6 @@ sudo systemctl daemon-reload
 sudo systemctl restart xray
 sudo systemctl enable xray
 ```
-```
 - ganti subdomain.reonolimits.my.id menjadi nama domain punya kamu
 ```
 sudo certbot certonly --standalone -d subdomain.reonolimits.my.id
