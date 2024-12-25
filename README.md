@@ -2,7 +2,7 @@
 sudo apt update && sudo apt upgrade -y
 ```
 ```
-sudo apt install -y curl wget vim
+sudo apt install -y curl wget vim jq certbot
 ```
 ```
 bash <(curl -L https://raw.githubusercontent.com/XTLS/Xray-install/main/install-release.sh)
@@ -13,8 +13,6 @@ sudo systemctl restart xray
 sudo systemctl enable xray
 ```
 ```
-sudo apt install certbot
-```
 - ganti subdomain.reonolimits.my.id menjadi nama domain punya kamu
 ```
 sudo certbot certonly --standalone -d subdomain.reonolimits.my.id
@@ -23,15 +21,6 @@ sudo certbot certonly --standalone -d subdomain.reonolimits.my.id
 cat >/root/domain <<EOF
 subdomain.reonolimits.my.id
 EOF
-```
-```
-mkdir -p /etc/xray
-cat >/etc/xray/domain <<EOF
-subdomain.reonolimits.my.id
-EOF
-```
-```
-sudo apt install jq -y
 ```
 ```
 cat >/usr/local/etc/xray/config.json <<EOF
