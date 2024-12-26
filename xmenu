@@ -33,7 +33,7 @@ echo "║3 ║ Domain Name Checker                             ║"
 echo "║4 ║ Check Public IP                                 ║"
 echo "║5 ║ Update Script                                   ║"
 echo "║6 ║ Restart Service XRAY                            ║"
-echo "║7 ║ Speedtest Server                                ║"
+echo "║7 ║ Benchmark VPS                                   ║"
 echo "║8 ║ Reboot VPS                                      ║"
 echo "║0 ║ Exit Menu                                       ║"
 echo "╚════════════════════════════════════════════════════╝" 
@@ -58,7 +58,7 @@ updatedll
 restart_xray
 ;;
 7)
-speedtest
+curl -Lso- https://bench.sh | bash
 ;;
 8)
 reboot
