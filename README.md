@@ -106,6 +106,7 @@ source ~/.bashrc
 ```
 wget -O updatedll "https://raw.githubusercontent.com/reokadhafi/myxray/main/updatedll"
 ```
+```
 chmod +x updatedll
 ```
 - Ganti zona waktu
