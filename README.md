@@ -2,7 +2,7 @@
 sudo apt update && sudo apt upgrade -y
 ```
 ```
-sudo apt install -y curl wget vim jq certbot
+sudo apt install -y curl wget vim jq certbot uuid
 ```
 ```
 bash <(curl -L https://raw.githubusercontent.com/XTLS/Xray-install/main/install-release.sh)
@@ -105,6 +105,8 @@ source ~/.bashrc
 - Pasang Xmenu
 ```
 wget -O updatedll "https://raw.githubusercontent.com/reokadhafi/myxray/main/updatedll"
+```
+chmod +x updatedll
 ```
 - Ganti zona waktu
 ```
