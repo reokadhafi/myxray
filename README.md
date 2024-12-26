@@ -20,6 +20,10 @@ sudo certbot certonly --standalone -d subdomain.reonolimits.my.id
 cat >/root/domain <<EOF
 subdomain.reonolimits.my.id
 EOF
+mkdir -p /etc/xray
+cat >/etc/xray/domain <<EOF
+subdomain.reonolimits.my.id
+EOF
 ```
 ```
 cat >/usr/local/etc/xray/config.json <<EOF
