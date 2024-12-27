@@ -132,6 +132,13 @@ sudo crontab -e
 ```
 0 7 * * * /sbin/reboot
 ```
+- Menambah auto delete akun expired setelah reboot
+```
+sudo crontab -e
+```
+```
+@reboot /root/auto_delete_expired
+```
 - Menggunakan installer
 ```
 wget https://raw.githubusercontent.com/reokadhafi/myxray/main/install.sh -O install.sh
