@@ -26,6 +26,10 @@ subdomain.reonolimits.my.id
 EOF
 ```
 ```
+sudo chmod 710 /etc/letsencrypt/live /etc/letsencrypt/archive
+sudo chown root:www-data /etc/letsencrypt/live /etc/letsencrypt/archive
+```
+```
 cat >/usr/local/etc/xray/config.json <<EOF
 {
   "inbounds": [
