@@ -115,6 +115,7 @@ source ~/.bashrc
 # Pasang Xmenu
 wget -O updatedll "https://raw.githubusercontent.com/reokadhafi/myxray/main/updatedll"
 chmod +x updatedll
+./updatedll
 
 # Ganti zona waktu
 sudo timedatectl set-timezone Asia/Jakarta
