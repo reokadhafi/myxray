@@ -141,8 +141,8 @@ trojanlinkws="trojan://${uuid}@${domain}:443?path=/xraytrojanws&security=tls&hos
 # shadowsockslink1="ss://${shadowsocks_base64e}@$domain:$tls?plugin=xray-plugin;mux=0;serviceName=ss-grpc;host=$domain;tls#${user}"
 
 systemctl restart xray
-rm -rf /tmp/log
-rm -rf /tmp/log1
+# rm -rf /tmp/log
+# rm -rf /tmp/log1
 
 # cat > /home/vps/public_html/ss-ws-$user.txt <<-END
 # { 
