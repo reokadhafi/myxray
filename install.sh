@@ -16,11 +16,6 @@ sudo apt install -y curl wget vim jq certbot uuid cron
 # Install Xray
 bash <(curl -L https://raw.githubusercontent.com/XTLS/Xray-install/main/install-release.sh)
 
-# Reload dan restart Xray service
-sudo systemctl daemon-reload
-sudo systemctl restart xray
-sudo systemctl enable xray
-
 # Menghasilkan sertifikat SSL menggunakan Certbot
 sudo certbot certonly --standalone -d $DOMAIN
 
@@ -107,6 +102,11 @@ cat >/usr/local/etc/xray/config.json <<EOF
   }
 }
 EOF
+
+# Reload dan restart Xray service
+sudo systemctl daemon-reload
+sudo systemctl restart xray
+sudo systemctl enable xray
 
 # Menambahkan /root ke dalam PATH
 echo "export PATH=\$PATH:/root" | sudo tee -a ~/.bashrc
