@@ -120,8 +120,5 @@ chmod +x updatedll
 # Ganti zona waktu
 sudo timedatectl set-timezone Asia/Jakarta
 
-# Menambah auto reboot VPS setiap jam 7 pagi WIB
-echo "0 7 * * * /sbin/reboot" | sudo crontab -e
-
 # Selesai
 echo "Instalasi selesai!"
