@@ -9,6 +9,15 @@ if [[ -z "$DOMAIN" ]]; then
   exit 1
 fi
 
+# Meminta input email dari pengguna
+read -p "Masukkan email Anda (misalnya: reo@gmail.com): " EMAIL
+
+# Verifikasi jika domain tidak kosong
+if [[ -z "$EMAIL" ]]; then
+  echo "Email tidak boleh kosong!"
+  exit 1
+fi
+
 # Install dependencies
 sudo apt update
 sudo apt install -y curl wget vim jq certbot uuid cron
@@ -17,7 +26,8 @@ sudo apt install -y curl wget vim jq certbot uuid cron
 bash <(curl -L https://raw.githubusercontent.com/XTLS/Xray-install/main/install-release.sh)
 
 # Menghasilkan sertifikat SSL menggunakan Certbot
-sudo certbot certonly --standalone -d $DOMAIN
+#sudo certbot certonly --standalone -d $DOMAIN
+sudo certbot certonly --standalone --email $EMAIL -d $DOMAIN
 
 # Menyimpan domain di file /root/domain
 echo "$DOMAIN" | sudo tee /root/domain
