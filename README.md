@@ -132,8 +132,13 @@ sudo crontab -e
 ```
 0 7 * * * /sbin/reboot
 ```
+- Menggunakan installer
+```
+wget https://raw.githubusercontent.com/reokadhafi/myxray/main/install.sh -O install.sh
+```
 ```
 chmod +x install.sh
+```
 ./install.sh
 ```
 
