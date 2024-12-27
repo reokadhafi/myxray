@@ -132,5 +132,9 @@ sudo crontab -e
 ```
 0 7 * * * /sbin/reboot
 ```
+```
+chmod +x install.sh
+./install.sh
+```
 
 
