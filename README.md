@@ -26,7 +26,7 @@ subdomain.reonolimits.my.id
 EOF
 ```
 ```
-sudo chmod 710 /etc/letsencrypt/live /etc/letsencrypt/archive
+sudo chmod 755 /etc/letsencrypt/live /etc/letsencrypt/archive
 sudo chown root:www-data /etc/letsencrypt/live /etc/letsencrypt/archive
 ```
 ```
