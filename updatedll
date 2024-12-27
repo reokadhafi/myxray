@@ -10,15 +10,11 @@ wget -O add_akun "https://raw.githubusercontent.com/reokadhafi/myxray/main/add_a
 wget -O updatedll "https://raw.githubusercontent.com/reokadhafi/myxray/main/updatedll"
 wget -O delete_akun "https://raw.githubusercontent.com/reokadhafi/myxray/main/delete_akun"
 wget -O restart_xray "https://raw.githubusercontent.com/reokadhafi/myxray/main/restart_xray"
-wget -O cek_port "https://raw.githubusercontent.com/reokadhafi/myxray/main/cek_port"
 wget -O auto_delete_expired "https://raw.githubusercontent.com/reokadhafi/myxray/main/auto_delete_expired"
-
-# wget -O certv2ray "https://raw.githubusercontent.com/reokadhafi/XRAY-MOD/main/xray/certv2ray.sh"
-# chmod +x /usr/bin/certv2ray
 
 # Berikan izin eksekusi
 #ubuntu
 #chmod +x /usr/bin/updatedll /usr/bin/xmenu /usr/bin/add-akun /usr/bin/delete-akun /usr/bin/restart-xray /usr/bin/auto-pointing /usr/bin/cek-port /usr/bin/auto-delete-expired
 #debian
-chmod +x updatedll xmenu add_akun delete_akun restart_xray cek_port auto_delete_expired
+chmod +x updatedll xmenu add_akun delete_akun restart_xray auto_delete_expired
 cd
