@@ -27,7 +27,7 @@ sudo mkdir -p /etc/xray
 echo "$DOMAIN" | sudo tee /etc/xray/domain
 
 # Edit file systemd xray.service
-echo "Ganti user=root" | sudo tee -a /etc/systemd/system/xray.service
+sudo sed -i 's/^User=.*$/User=root/' /etc/systemd/system/xray.service
 
 # Mengonfigurasi Xray dengan file config.json
 cat >/usr/local/etc/xray/config.json <<EOF
