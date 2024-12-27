@@ -139,6 +139,7 @@ wget https://raw.githubusercontent.com/reokadhafi/myxray/main/install.sh -O inst
 ```
 chmod +x install.sh
 ```
+```
 ./install.sh
 ```
 
