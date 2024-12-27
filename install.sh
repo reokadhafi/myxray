@@ -77,8 +77,8 @@ cat >/usr/local/etc/xray/config.json <<EOF
         "tlsSettings": {
           "certificates": [
             {
-              "certificateFile": "/etc/letsencrypt/live/neva.reonolimits.my.id/fullchain.pem",
-              "keyFile": "/etc/letsencrypt/live/neva.reonolimits.my.id/privkey.pem"
+              "certificateFile": "/etc/letsencrypt/live/$DOMAIN/fullchain.pem",
+              "keyFile": "/etc/letsencrypt/live/$DOMAIN/privkey.pem"
             }
           ]
         },
