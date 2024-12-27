@@ -120,5 +120,8 @@ chmod +x updatedll
 # Ganti zona waktu
 sudo timedatectl set-timezone Asia/Jakarta
 
+# Hapus Installer
+rm install.sh updatedll
+
 # Selesai
 echo "Instalasi selesai!"
