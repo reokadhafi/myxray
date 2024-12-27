@@ -47,7 +47,7 @@ cat >/usr/local/etc/xray/config.json <<EOF
             "id": "14a995ab-1098-4d94-9984-334744714882",
             "alterId": 0
 #vmess
-### reoneva 2025-04-06
+### reo1 2025-04-06
 },{"id": "d05b0f4b-c6af-4f88-a80b-4c0166a380fb","email": "reo1"
           }
         ]
@@ -71,7 +71,7 @@ cat >/usr/local/etc/xray/config.json <<EOF
             "password": "14a995ab-1098-4d94-9984-334744714882",
             "email": "reo"
 #trojangrpc
-### reoneva 2025-04-06
+### reo1 2025-04-06
 },{"password": "d05b0f4b-c6af-4f88-a80b-4c0166a380fb","email": "reo1"
           }
         ]
