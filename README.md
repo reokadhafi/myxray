@@ -34,52 +34,56 @@ cat >/usr/local/etc/xray/config.json <<EOF
 {
   "inbounds": [
     {
-      "port": 80,  // Port untuk VMess WebSocket tanpa TLS
+      "port": 80,
       "protocol": "vmess",
       "settings": {
         "clients": [
           {
-            "id": "14a995ab-1098-4d94-9984-334744714882",  // UUID untuk VMess
+            "id": "14a995ab-1098-4d94-9984-334744714882",
             "alterId": 0
 #vmess
+### reoneva 2025-04-06
+},{"id": "d05b0f4b-c6af-4f88-a80b-4c0166a380fb","email": "reoneva"
           }
         ]
       },
       "streamSettings": {
-        "network": "ws",  // Menggunakan WebSocket
+        "network": "ws",
         "wsSettings": {
-          "path": "/vmessws",  // Path untuk VMess WS
+          "path": "/vmessws",
           "headers": {
-            "Host": "ovh.reonolimits.my.id"  // Host
+            "Host": "neva.reonolimits.my.id"
           }
         }
       }
     },
     {
-      "port": 443,  // Port untuk Trojan gRPC dengan TLS
+      "port": 443,
       "protocol": "trojan",
       "settings": {
         "clients": [
           {
-            "password": "14a995ab-1098-4d94-9984-334744714882",  // Password untuk Trojan
+            "password": "14a995ab-1098-4d94-9984-334744714882",
             "email": "reo1"
 #trojangrpc
+### reoneva 2025-04-06
+},{"password": "d05b0f4b-c6af-4f88-a80b-4c0166a380fb","email": "reoneva"
           }
         ]
       },
       "streamSettings": {
-        "network": "grpc",  // Menggunakan gRPC
-        "security": "tls",  // Mengaktifkan TLS
+        "network": "grpc",
+        "security": "tls",
         "tlsSettings": {
           "certificates": [
             {
-              "certificateFile": "/etc/letsencrypt/live/ovh.reonolimits.my.id/fullchain.pem",  // Sertifikat TLS dari Certbot
-              "keyFile": "/etc/letsencrypt/live/ovh.reonolimits.my.id/privkey.pem"  // Private key dari Certbot
+              "certificateFile": "/etc/letsencrypt/live/neva.reonolimits.my.id/fullchain.pem",
+              "keyFile": "/etc/letsencrypt/live/neva.reonolimits.my.id/privkey.pem"
             }
           ]
         },
         "grpcSettings": {
-          "serviceName": "trojangrpc"  // Nama service gRPC
+          "serviceName": "trojangrpc"
         }
       }
     }
