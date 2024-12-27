@@ -25,9 +25,9 @@ cat >/etc/xray/domain <<EOF
 subdomain.reonolimits.my.id
 EOF
 ```
+- ganti user=root
 ```
-sudo chmod 755 /etc/letsencrypt/live /etc/letsencrypt/archive
-sudo chown root:www-data /etc/letsencrypt/live /etc/letsencrypt/archive
+sudo nano /etc/systemd/system/xray.service
 ```
 ```
 cat >/usr/local/etc/xray/config.json <<EOF
