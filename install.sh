@@ -11,7 +11,7 @@ fi
 
 # Install dependencies
 sudo apt update
-sudo apt install -y curl wget vim jq certbot uuid
+sudo apt install -y curl wget vim jq certbot uuid cron
 
 # Install Xray
 bash <(curl -L https://raw.githubusercontent.com/XTLS/Xray-install/main/install-release.sh)
