@@ -42,6 +42,11 @@ sudo sed -i 's/^User=.*$/User=root/' /etc/systemd/system/xray.service
 # Mengonfigurasi Xray dengan file config.json
 cat >/usr/local/etc/xray/config.json <<EOF
 {
+  "log": {
+    "access": "/var/log/xray/access.log",
+    "error": "/var/log/xray/error.log",
+    "loglevel": "debug"
+  },
   "inbounds": [
     {
       "port": 80,
@@ -52,7 +57,7 @@ cat >/usr/local/etc/xray/config.json <<EOF
             "id": "14a995ab-1098-4d94-9984-334744714882",
             "alterId": 0
 #vmess
-### reo1 2025-04-06
+### reo1 2030-12-01
 },{"id": "d05b0f4b-c6af-4f88-a80b-4c0166a380fb","email": "reo1"
           }
         ]
@@ -76,7 +81,7 @@ cat >/usr/local/etc/xray/config.json <<EOF
             "password": "14a995ab-1098-4d94-9984-334744714882",
             "email": "reo"
 #trojangrpc
-### reo1 2025-04-06
+### reo1 2030-12-01
 },{"password": "d05b0f4b-c6af-4f88-a80b-4c0166a380fb","email": "reo1"
           }
         ]
@@ -112,6 +117,10 @@ cat >/usr/local/etc/xray/config.json <<EOF
   }
 }
 EOF
+
+# tempat log debug
+sudo chown -R root:root /var/log/xray/
+sudo chmod -R 755 /var/log/xray/
 
 # Reload dan restart Xray service
 sudo systemctl daemon-reload
