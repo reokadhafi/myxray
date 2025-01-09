@@ -40,6 +40,8 @@ echo "$DOMAIN" | sudo tee /etc/xray/domain
 sudo sed -i 's/^User=.*$/User=root/' /etc/systemd/system/xray.service
 
 # Mengonfigurasi Xray dengan file config.json
+uuid1=$(uuid)
+uuid2=$(uuid)
 cat >/usr/local/etc/xray/config.json <<EOF
 {
   "log": {
@@ -54,11 +56,11 @@ cat >/usr/local/etc/xray/config.json <<EOF
       "settings": {
         "clients": [
           {
-            "id": "14a995ab-1098-4d94-9984-334744714882",
+            "id": "$uuid1",
             "alterId": 0
 #vmess
 ### reo1 2030-12-01
-},{"id": "d05b0f4b-c6af-4f88-a80b-4c0166a380fb","email": "reo1"
+},{"id": "$uuid2","email": "reo1"
           }
         ]
       },
@@ -78,11 +80,11 @@ cat >/usr/local/etc/xray/config.json <<EOF
       "settings": {
         "clients": [
           {
-            "password": "14a995ab-1098-4d94-9984-334744714882",
+            "password": "$uuid1",
             "email": "reo"
 #trojangrpc
 ### reo1 2030-12-01
-},{"password": "d05b0f4b-c6af-4f88-a80b-4c0166a380fb","email": "reo1"
+},{"password": "$uuid2": "reo1"
           }
         ]
       },
