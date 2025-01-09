@@ -10,7 +10,6 @@ chmod +x install.sh
 ```
 - Menambah auto reboot,auto delete exp,auto delete log(jam 7 pagi WIB)
 ```
-```
 sudo crontab -e
 ```
 0 7 * * * /sbin/reboot
