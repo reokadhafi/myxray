@@ -35,7 +35,6 @@ echo "║5 ║ Update Script                                   ║"
 echo "║6 ║ Restart Service XRAY                            ║"
 echo "║7 ║ Benchmark VPS                                   ║"
 echo "║8 ║ Reboot VPS                                      ║"
-echo "║9 ║ Hapus log xray                                  ║"
 echo "║0 ║ Exit Menu                                       ║"
 echo "╚════════════════════════════════════════════════════╝" 
 read -p "╰┈➤Select From Options [1-69 or x] :  " xmenu
@@ -63,10 +62,6 @@ curl -Lso- https://bench.sh | bash
 ;;
 8)
 reboot
-;;
-9)
-cat /dev/null > /var/log/xray/access.log
-cat /dev/null > /var/log/xray/error.log
 ;;
 0)
 exit
