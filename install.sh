@@ -26,7 +26,6 @@ sudo apt install -y curl wget vim jq certbot uuid cron htop iftop vnstat nload
 bash <(curl -L https://raw.githubusercontent.com/XTLS/Xray-install/main/install-release.sh)
 
 # Menghasilkan sertifikat SSL menggunakan Certbot
-#sudo certbot certonly --standalone -d $DOMAIN
 sudo certbot certonly --standalone --email $EMAIL -d $DOMAIN
 
 # Menyimpan domain di file /root/domain
