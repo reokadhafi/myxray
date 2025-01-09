@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Meminta input domain dari pengguna
-read -p "Masukkan domain Anda (misalnya: subdomain.reonolimits.my.id): " DOMAIN
+read -p "Masukkan domain Anda (misalnya: subdomain.reon.my.id): " DOMAIN
 
 # Verifikasi jika domain tidak kosong
 if [[ -z "$DOMAIN" ]]; then
@@ -10,7 +10,7 @@ if [[ -z "$DOMAIN" ]]; then
 fi
 
 # Meminta input email dari pengguna
-read -p "Masukkan email Anda (misalnya: reo@gmail.com): " EMAIL
+read -p "Masukkan email Anda (misalnya: xxx@gmail.com): " EMAIL
 
 # Verifikasi jika domain tidak kosong
 if [[ -z "$EMAIL" ]]; then
